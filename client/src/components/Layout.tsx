@@ -1,11 +1,11 @@
-import { useState } from "react";
-import Sidebar from "./Sidebar";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useState } from 'react'
+import Sidebar from './Sidebar'
+import { Button } from '@/components/ui/button'
+import { Menu } from 'lucide-react'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function Layout({ children }: LayoutProps) {
@@ -32,19 +32,17 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Mobile header */}
       <div className="md:hidden bg-primary flex items-center justify-center p-4 text-white">
-        <h1 className="text-xl font-bold">SecureVend</h1>
+        <h1 className="text-xl font-bold">Acme Checkout</h1>
       </div>
 
       {/* Main content */}
       <div className="md:pl-64 flex flex-col flex-1">
         <main className="flex-1">
           <div className="pt-4 md:py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              {children}
-            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">{children}</div>
           </div>
         </main>
       </div>
     </div>
-  );
+  )
 }
